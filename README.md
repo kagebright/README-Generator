@@ -1,5 +1,5 @@
 # README-Generator
-This application creates a professional high-quality REEADME file. 
+This application creates a professional high-quality README file. 
 
 Technologies used: JavaScript and Node.js
 
