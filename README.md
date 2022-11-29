@@ -7,6 +7,6 @@ Challenge: In this week,s challenge we will using node.js and inquirer in JavaSc
 
 ## Links:
 
-### Website: https://kagebright.github.io/readme-generator/
+### Website: https://kagebright.github.io/README-Generator/
 
 ### GitHub: https://github.com/kagebright/README-Generator
