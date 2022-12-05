@@ -1,9 +1,9 @@
-const fs = require("fs");
 const inquirer = require('inquirer');
 const util = require("util");
 
 //writing the README file
-const writeFileAsync = util.promisify(fs.writefile);
+
+//const writeFileAsync = util.promisify(fs.writefile);
 
 const generateMarkdown = require("./utils/generateMarkdown")
 
@@ -75,7 +75,14 @@ inquirer
       message: 'Please select a license for your project:'
   }
 ]);
+  //then((response) => {
+    //response.confirm === response.answer
+  //});
+  //catch (error) {
+    //console.log(error);
 
+   // }
+  //;
 
 //initializing the application
 async function init() {
