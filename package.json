@@ -10,14 +10,5 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kagebright/README-Generator.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/kagebright/README-Generator/issues"
-  },
-  "homepage": "https://github.com/kagebright/README-Generator#readme"
+  }
 }

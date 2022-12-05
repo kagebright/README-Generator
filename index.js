@@ -5,6 +5,8 @@ const util = require("util");
 //writing the README file
 const writeFileAsync = util.promisify(fs.writefile);
 
+const generateMarkdown = require("./utils/generateMarkdown")
+
 inquirer
   .prompt([
     {
@@ -52,9 +54,44 @@ inquirer
       message: 'What is included in the README?',
       name: 'questions',
     },
-  ])
-  .then((response) =>
-    response.confirm === response.input
-      ? console.log('Success!')
-      : console.log('You forgot your input already?!')
-  );
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter email here:'
+  },
+  {
+      type: 'input',
+      name: 'github',
+      message: 'Enter Github here:'
+  },
+  {
+      type: 'list',
+      choices: [
+          "MIT",
+          "GPL",
+          "APACHE"
+      ],
+      name: 'license',
+      message: 'Please select a license for your project:'
+  }
+]);
+
+
+//initializing the application
+async function init() {
+  try {
+      const answer = await promptUser();
+      console.log(answer);
+  
+      const readMe = generateMarkdown(answer);
+  
+      writeFileAsync("README-Professinal.md", readMe).then(function() {
+          console.log("successfully wrote to README-Professional.md");
+      });
+  }
+  catch (err) {
+      console.log(err);
+  }
+}
+
+init();
