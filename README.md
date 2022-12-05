@@ -5,8 +5,7 @@ Technologies used: JavaScript and Node.js
 
 Challenge: In this week's challenge we will using node.js and inquirer in JavaScript to create a professional README file by using a command-line application.
 
-## Links:
 
-### Website: https://kagebright.github.io/README-Generator/
+[Link to README Generator Github](https://github.com/kagebright/README-Generator)
 
-### GitHub: https://github.com/kagebright/README-Generator
+Screenshots: 

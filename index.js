@@ -1,3 +1,4 @@
+const fs = require("fs");
 const inquirer = require('inquirer');
 const util = require("util");
 
@@ -75,30 +76,17 @@ inquirer
       message: 'Please select a license for your project:'
   }
 ]);
-  //then((response) => {
-    //response.confirm === response.answer
-  //});
-  //catch (error) {
-    //console.log(error);
-
-   // }
-  //;
 
 //initializing the application
-async function init() {
-  try {
-      const answer = await promptUser();
-      console.log(answer);
-  
-      const readMe = generateMarkdown(answer);
-  
-      writeFileAsync("README-Professinal.md", readMe).then(function() {
-          console.log("successfully wrote to README-Professional.md");
-      });
-  }
-  catch (err) {
-      console.log(err);
+function promptUser() {
+  inquirer.prompt(questions).then((response)) => {
+
+    const response = generateMarkdown(response);
+
+    writeFileAsync("README-Professinal.md", readMe).then(function() {
+      console.log("successfully wrote to README-Professional.md");
+  });
   }
 }
 
-init();
+promptUser();
