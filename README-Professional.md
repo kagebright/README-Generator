@@ -1,38 +1,31 @@
-# README Generator
 
+  # README Generator
+  
+  ## Table of Contents:
+  1.[Description](#description);
+  2.[Usage](#usage);
+  3.[Contribution](#contribution);
+  4.[Installation](#installation);
+  5.[Questions](questions);
+  6.[License](#license);
+  
+  ## Description
+  Creates a README for a project
 
-## Creates a README for a project
-            
-## Table of Contents:
-1. [Installation](#installation)
-1. [Usage](#usage)
-1. [Contribution](#contribution)
-1. [Tests](#tests)
-1. [Questions](#questions)
-1. [License](#license)
+  ## Usage:
+undefined
             
 ## Installation:
-open the folder in command line and run node index.js
-            
-## Usage:
-To create a README file for a project
+undefined
             
 ## Contributing:
-Just Myself
-            
-## Tests:
-None so far
+undefined
     
 ## Questions:
+You can find my contact info below
 Email: bright.abety@gmail.com
-
-
-GitHub: 
-[kagebright](https://github.com/kagebright)
-
-
-Please reach out if you have any questions!
+GitHub: kagebright
 
 ## License:
-  ![MIT](https://img.shields.io/badge/license-MIT-azure)
+MIT(https://img.shields.io/badge/license-MIT-azure)
   
