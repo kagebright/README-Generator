@@ -15,6 +15,10 @@ This is a command-line application that generates a professional README.md file 
 
 ## Links
 [Github repo](https://github.com/kagebright/README-Generator)
+[video](https://user-images.githubusercontent.com/113262558/215650013-2e5415d0-b4ff-479d-9a5f-e9b3bfb4cba6.mov)
 
-Screenshots: 
-![Screen Shot 2022-12-04 at 11 14 11 PM](https://user-images.githubusercontent.com/113262558/205548546-e25d852e-630a-48b0-89b6-ffa1e1de4094.png)
+
+
+## Screenshots: 
+
+![Screen Shot 2023-01-30 at 9 43 58 PM](https://user-images.githubusercontent.com/113262558/215650098-54a94835-690e-4700-a828-da6522cc7cf5.png)
