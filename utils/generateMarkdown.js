@@ -2,41 +2,36 @@
 function generateMarkdown(data) {
   console.log(data);
 
-  return `# ${data.title}
+  return `
+  # ${data.title}
   
-  ## ${data.description}
-  
-  ##Table of COntents:
-  1.[Installation](#installation);
+  ## Table of Contents:
+  1.[Description](#description);
   2.[Usage](#usage);
-  3.[License](license);
-  4.[Contribution](contribution);
-  5.[Tests](tests);
-  6.[Questions](questions);
+  3.[Contribution](#contribution);
+  4.[Installation](#installation);
+  5.[Questions](questions);
+  6.[License](#license);
   
-  ## Installation:
-${data.installation}
-            
-## Usage:
+  ## Description
+  ${data.description}
+
+  ## Usage:
 ${data.usage}
+            
+## Installation:
+${data.installation}
             
 ## Contributing:
 ${data.contributing}
-            
-## Tests:
-${data.tests}
     
 ## Questions:
-Email: ${data.email}
-\n
-GitHub: 
-[${data.github}](https://github.com/${data.github})
-\n
 ${data.questions}
+Email: ${data.email}
+GitHub: ${data.github}
+
 ## License:
-  ![${data.license}](https://img.shields.io/badge/license-${data.license}-azure)
-
+${data.license}(https://img.shields.io/badge/license-${data.license}-azure)
   `
-}
-
+};
 module.exports = generateMarkdown;

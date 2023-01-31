@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
-const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 //writing the README file
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -26,26 +26,21 @@ const questions = [
     {
       type: 'input',
       message: 'What is the installation process?',
-      name: 'installation',
+      name: 'Installation',
     },
     {
       type: 'input',
-      message: 'What will the app be used for?',
-      name: 'usage',
+      message: 'What is the program usage?',
+      name: 'Usage',
     },
     {
       type: 'input',
-      message: 'What license is used for this application?',
-      name: 'license',
+      message: 'What is the contribution guidelines?',
+      name: 'Contribution',
     },
     {
-      type: 'input',
-      message: 'Who will be working on this application with you?',
-      name: 'contributing',
-    },
-    {
-      type: 'input',
-      message: 'What tests are you running on your application?',
+    type: 'input',
+      message: 'What are the test instructions?',
       name: 'tests',
     },
     {
@@ -56,7 +51,7 @@ const questions = [
     {
       type: 'input',
       name: 'email',
-      message: 'Enter email here:'
+      message: 'For question(email):'
   },
   {
       type: 'input',
