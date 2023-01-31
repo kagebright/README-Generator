@@ -3,13 +3,11 @@ const inquirer = require('inquirer');
 const util = require("util");
 
 //writing the README file
-
-//const writeFileAsync = util.promisify(fs.writefile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const generateMarkdown = require("./utils/generateMarkdown")
 
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'input',
       message: 'What is the title of the README',
@@ -18,12 +16,12 @@ inquirer
     {
       type: 'input',
       message: 'What is the description of the README.md?',
-      name: 'Description',
+      name: 'description',
     },
     {
       type: 'input',
-      message: 'What is included in the README?',
-      name: 'table of contents',
+      message: 'What is included in the table of contents?',
+      name: 'table_of_contents',
     },
     {
       type: 'input',
@@ -52,7 +50,7 @@ inquirer
     },
     {
       type: 'input',
-      message: 'What is included in the README?',
+      message: 'What questions do you want to include in the README?',
       name: 'questions',
     },
     {
@@ -63,7 +61,7 @@ inquirer
   {
       type: 'input',
       name: 'github',
-      message: 'Enter Github here:'
+      message: 'Enter Github username here:'
   },
   {
       type: 'list',
@@ -75,18 +73,18 @@ inquirer
       name: 'license',
       message: 'Please select a license for your project:'
   }
-]);
+];
 
 //initializing the application
-function promptUser() {
-  inquirer.prompt(questions).then((response)) => {
+async function promptUser() {
+  const responses = await inquirer.prompt(questions);
 
-    const response = generateMarkdown(response);
+  const readMe = generateMarkdown(responses);
 
-    writeFileAsync("README-Professinal.md", readMe).then(function() {
-      console.log("successfully wrote to README-Professional.md");
+  await writeFileAsync("README-Professional.md", readMe)
+    .then(function() {
+      console.log("Successfully wrote to README-Professional.md");
   });
-  }
 }
 
 promptUser();
