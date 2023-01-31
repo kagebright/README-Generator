@@ -1,4 +1,4 @@
-#09: README-Generator
+# 09 README-Generator
 
 ## Description
 This is a command-line application that generates a professional README.md file based on user inputs using the Inquirer package. The application can be invoked by running node index.js.

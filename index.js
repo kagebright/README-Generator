@@ -1,10 +1,12 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
-const generateMarkdown = require("./utils/generateMarkdown");
+
+const util =require("util");
 
 //writing the README file
 const writeFileAsync = util.promisify(fs.writeFile);
 
+//open generatedREADME file
 const generateMarkdown = require("./utils/generateMarkdown")
 
 const questions = [
